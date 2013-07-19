@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hamcrest.Description;
+import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
@@ -60,5 +61,10 @@ public class MatchesBundle extends TypeSafeMatcher<Bundle> {
 	@Override
 	protected boolean matchesSafely(Bundle item) {
 		return matcher.matches(item);
+	}
+
+	@Factory
+	public static final Matcher<Bundle> matchesBundle(Bundle bundle) {
+		return new MatchesBundle(bundle);
 	}
 }
