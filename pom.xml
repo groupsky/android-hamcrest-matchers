@@ -65,7 +65,7 @@
 		<!-- Test suite dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<artifactId>junit-dep</artifactId>
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
